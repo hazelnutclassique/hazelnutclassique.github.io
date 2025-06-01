@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calvin Truong</title>
+
+	<!-- Meta Settings -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	
+	<!-- Style sheets -->
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'>
+</head>
+
+<body>
+	<div class="avatar_box">
+		<img class="avatar" src="../img/avatar/avatar.png">
+	</div>
+	<div class = "nav_and_main">
+		<nav id="#top">
+			<ul>
+				<li class = "name_title">Calvin Truong</li>
+				<a class = "nav_item" href="../index.html"><li><span class = "small_type ">01</span><span class="active">Work</span></li></a>
+				<a class = "nav_item" href="about.html"><li><span class = "small_type">02</span><span>About</span></li></a>
+			</ul>
+		</nav>
+
+		<div class="content_main">
+			<main class = "project_main">
+			    <div class="project">
+			    	<div>
+						<h1>Simple Talk</h1>
+						<p class="subtitle">Messaging App in C</p>
+					</div>
+				    <figure>
+						<img loading="lazy" class= "img_full_wide img_enlarge" src="../img/s-talk/s-talk_example.png" alt="A quick look at s-talk running a regular session.">
+						<figcaption>A quick look at s-talk running a regular user entry session.</figcaption>
+					</figure>	
+					<h2>Introduction</h2>
+					<p class="lead">Using C and a modular design, I created a simple threaded messaging application over a local network using UDP sockets.</p>
+
+					<p>It was coded in a Linux environment to match the testing environment throughout the development process. It is important to note that this is a course assignment and I do not provide the source code or solution here in the interest of respecting the assignment, class and professors.</p>
+
+					<h2>Testing</h2>
+					 <!-- /*add image, link to note book*/ -->
+					<p class="lead">I conducted most of the testing in a virtual machine using Ubuntu 20.04 because the same environment would be used by the marking team.</p>
+					<p>As well, valgrind and gdb were easy to install straight into my virtual machine for testing rather than into my macOS which has compatibility issues with valgrind at the time of this writing. The majority of testing used localhost as the argument for whom to connect to simply because I already verified that my UDP socket was working with remote machines and it was faster to do everything from my own machine. Throughout the development process and once my application was near finished, I ran valgrind to find and eliminate memory leaks and track down errors which were all removed.</p>
+					
+					<figure>
+						<img loading="lazy" class= "img_full_wide img_enlarge" src="../img/s-talk/valgrind_s-talk.png" alt="A run through of valgrind on my final iteration of s-talk.">
+						<figcaption>A run through valgrind of my final interation of the code showing 0 memory leaks while piping at high speeds.</figcaption>
+					</figure>	
+
+					<h2>Role</h2>
+					<p class="lead">This an individual project I did for my course on operating systems.</p>
+					<p>Though teaming up with another person was an option, I chose to do it individually to learn as much as I could from writing each piece of the application.</p>
+
+					<h2>Project Outcomes</h2>
+					<p class="lead">Using kernel level threads, I was able to create an application solving the critical section problem that is capable of piping data to output files on another remote machine.</p>
+					<p>As well, should a shutdown key be entered in one instance, it will shutdown as well as any remote machine it sends the exit key to. It was a great learning experience and really interesting to learn about good practices such as abstracting threads away from the main function for a clean modular design.</p>
+
+			    </div>
+			</main>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class = "footer_row">
+				<a href="#top" class ="footer_text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg></a>
+		</div>
+		<div class= "footer_row">
+			<div class = "social_icon">
+				<a href="https://www.linkedin.com/in/calvin-truoxg/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+				</a>
+			</div>
+			<div class = "social_icon">
+				<a href="https://github.com/cxtruong70">
+					<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+				</a>
+			</div>
+		</div>	
+
+		<div class = "footer_row">
+			<p id="email" class ="footer_text">Email: <a  href="mailto:calvintruong70@gmail.com">calvintruong70@gmail.com</a></p>	
+		</div>
+	</footer>
+
+	<!-- SCRIPTS -->
+	<script src="../js/scrollStyle.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="../js/lazysizes.js"></script>
+	<script>
+	    AOS.init({ duration: 800});
+	 </script>
+</body>
+</html>
